@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: purple;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.clock_parent{
+    display: grid;
+    place-items: center;
+    
+    position: relative;
+    height: 300px;
+    width: 500px;
+    background: #4B2F36;
+    box-shadow:2px 2px 10px rgba(0, 0, 0, 0.561)    ;
+
+}
+.clock{
+
+    background: #7F6269;
+    padding: 30px 50px;
+    
+    overflow: hidden;
+}
+.celander_info{
+    background: transparent;
+    text-align: center;
+   padding: 15px;
+}
+.celander_info span{
+    background: transparent;
+    font-size: 2rem;
+    color: #fff;
+    padding: 5px;
+    font-weight: 400;
+}
+.time{
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+
+}
+.progress{
+    position: relative;
+    height: 5px;
+    width: 80%;
+    background: #7F6269;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 3px lightgray;
+}
+.progress_bar{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background: cyan;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px rgba(8, 251, 251, 0.493);
+}
+.hours_div,
+span{
+    background: transparent;
+}
+.hours_div span{
+font-size: 4rem;
+color: cyan;
+padding: 0 2px;
+}
+#pe{
+    font-size: 3rem;
+    font-weight: 300;
+}
