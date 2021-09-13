@@ -83,3 +83,6 @@ padding: 0 2px;
     font-size: 3rem;
     font-weight: 300;
 }
+span{
+    user-select: none;
+}
