@@ -34,9 +34,11 @@ function showCurrentTime(){
     if(hrs== 0){
         hours.textContent = hrs = 12
     }
-    else if(hrs > 12 || hrs < 10){
-        hours.textContent = hrs = hrs -12
+    else if(hrs < 10){
         hours.textContent = hrs = '0'+ hrs
+    }
+    else if(hrs > 12){
+        hours.textContent = hrs = hrs -12
         pe.textContent = 'PM'
 
     }else if(hrs<12){
