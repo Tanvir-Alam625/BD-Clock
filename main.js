@@ -3,9 +3,10 @@ const minute = document.getElementById('minute');
 const second = document.getElementById('second');
 const progress = document.getElementById('progress');
 const pe = document.getElementById('pe');
-const dates = document.getElementById('day');
+const dates = document.getElementById('datshow');
 const month = document.getElementById('month');
 const year = document.getElementById('year');
+const days = document.getElementById('day');
 // console.log(hours);
 // console.log(minute);
 // console.log(second);
@@ -25,11 +26,14 @@ function showCurrentTime(){
     let hrs = date.getHours();
     let mnt = date.getMinutes();
     let sec = date.getSeconds();
+   
+
+
 
    year.textContent = yr;
    month.textContent = (mnth <10 ? '0' + (mnth +1) : (mnth + 1)) + '  /';
    dates.textContent =  (dt <10 ? '0' + dt : dt) + '  /';
-
+  
     
     if(hrs== 0){
         hours.textContent = hrs = 12
@@ -53,4 +57,32 @@ function showCurrentTime(){
 
 
 }
-setInterval(showCurrentTime, -1000)
+function daySetUp(){
+     
+    switch(new Date().getDay()){
+        case 0:
+            days.textContent = "Sunday,";
+            break;
+        case 1:
+            days.textContent = "Monday,";
+            break;
+        case 2:
+            days.textContent = "Tuesday,";
+            break;
+        case 3:
+            days.textContent = "Wednesday,";
+            break;
+        case 4:
+            days.textContent = "Thursday,";
+            break;
+        case 5:
+            days.textContent = "Friday,";
+            break;
+        case  6:
+            days.textContent = "Saturday,";
+    }
+}
+setInterval(showCurrentTime,  -1000)
+//days
+setInterval(daySetUp,  -1000)
+
