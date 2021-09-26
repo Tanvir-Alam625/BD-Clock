@@ -30,9 +30,9 @@ function showCurrentTime(){
 
 
 
-   year.textContent = yr;
-   month.textContent = (mnth <10 ? '0' + (mnth +1) : (mnth + 1)) + '  /';
-   dates.textContent =  (dt <10 ? '0' + dt : dt) + '  /';
+   year.textContent =" " + yr;
+//    month.textContent = (mnth <10 ? '0' + (mnth +1) : (mnth + 1)) + '  /';
+   dates.textContent =  (dt <10 ? '0' + dt : dt) + '  ';
   
     
     if(hrs== 0){
@@ -57,6 +57,7 @@ function showCurrentTime(){
 
 
 }
+//day setpu function
 function daySetUp(){
      
     switch(new Date().getDay()){
@@ -82,7 +83,55 @@ function daySetUp(){
             days.textContent = "Saturday,";
     }
 }
+//month setup function
+function monthSetUp(){
+     
+    switch(new Date().getMonth()){
+        case 0:
+            month.textContent = "January";
+            break;
+        case 1:
+            month.textContent = "February";
+            break;
+        case 2:
+            month.textContent = "March";
+            break;
+        case 3:
+            month.textContent = "April";
+            break;
+        case 4:
+            month.textContent = "May";
+            break;
+        case 5:
+            month.textContent = "June";
+            break;
+        case  6:
+            month.textContent = "July";
+            case 7:
+            month.textContent = "August";
+            break;
+        case 8:
+            month.textContent = "September";
+            break;
+        case 9:
+            month.textContent = "October";
+            break;
+        case 10:
+            month.textContent = "November";
+            break;
+        case 11:
+            month.textContent = "December";
+            
+            
+    }
+}
+
+
+
+//time and progress bar
 setInterval(showCurrentTime,  -1000)
 //days
 setInterval(daySetUp,  -1000)
+//months 
+setInterval(monthSetUp, -1000)
 
